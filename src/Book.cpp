@@ -47,8 +47,12 @@ bool Book::operator!=(const Book &other) const
 
 ::std::ostream &operator<<(::std::ostream &os, const Book &book)
 {
-    os << "[Book] " << book.title << " by " << book.author
-       << " | Year: " << book.year << ", Pages: " << book.pages
-       << ", Price: $" << book.price << ", Genre: " << book.genre;
+    os << "---Book---" << ::std::endl;
+    os << "Title: " << book.title << ::std::endl;
+    os << "Author: " << book.author << ::std::endl;
+    os << "Year: " << book.year << ::std::endl;
+    os << "Pages: " << book.pages << ::std::endl;
+    os << "Prices: " << book.price << ::std::endl;
+    os << "Genre: " << book.genre << ::std::endl;
     return os;
 }

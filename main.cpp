@@ -10,10 +10,13 @@
 #include <vector>
 int main() {
     Library lib;
+    Book vBook1{ "Book A", "Author X", 2020, 200, 19.99, "Fiction" };
+    Book vBook2{ "Book B", "Author Y", 2017, 300, 29.99, "Sci-Fi" };
+    Book vBook3{ "EBook C", "Author Z", 2022, 150, 14.99, "Non-fiction", 2.5, "PDF"};
 
-    lib.addBook(Book("Book A", "Author X", 2020, 200, 19.99, "Fiction"));
-    lib.addBook(Book("Book B", "Author Y", 2017, 300, 29.99, "Sci-Fi"));
-    lib.addBook(EBook("EBook C", "Author Z", 2022, 150, 14.99, "Non-fiction", 2.5, "PDF"));
+    lib.addBook(vBook1);
+    lib.addBook(vBook2);
+    lib.addBook(vBook3);
 
     ::std::cout << "All Books:" << ::std::endl;
     lib.printAllBooks();
